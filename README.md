@@ -5,7 +5,7 @@ it's not too big, and it performs well empirically.
 
 AlexNet puts the network on two GPUs, which allows for building a larger network. Although most of the calculations are done in parallel, the GPUs communicate with each other in certain layers. The original research paper on AlexNet said that parallelizing the network decreased the classification error rate by 1.7% when compared to a neural network that used half as many neurons on one GPU.
 
-<img src="/repository/"  title="AlexNet Architecture">
+<img src="alexnet-Archetecture.png"  title="AlexNet Architecture">
 
 # Transfer Learning with TensorFlow
 
@@ -19,9 +19,13 @@ How do we apply transfer learning? Two popular methods are **feature extraction*
 - **Finetuning**. This is similar to feature extraction except the pre-trained weights aren't frozen. The network is trained end-to-end.
 
 # 1. AlexNet for inference on the image set it was trained on.
+<img src="poodle.png"  title="poodle">
+<img src="weasel.png"  title="weasel">
 AlexNet was originally trained on the ImageNet database.
-
-#2. extract AlexNet's features and use them to classify images from the German Traffic Sign Recognition Benchmark dataset.
+ 
+# 2. extract AlexNet's features and use them to classify images from the German Traffic Sign Recognition Benchmark dataset.
+<img src="stop.jpg"  title="stop">
+<img src="construction.jpg"  title="construction">
 AlexNet expects a 227x227x3 pixel image, whereas the traffic sign images are 32x32x3 pixels.
 
 In order to feed the traffic sign images into AlexNet, I resized the images to the dimensions that AlexNet expects.
