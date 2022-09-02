@@ -18,8 +18,8 @@ How do we apply transfer learning? Two popular methods are **feature extraction*
 - **Feature extraction**. Take a pretrained neural network and replace the final (classification) layer with a new classification layer, or perhaps even a small feedforward network that ends with a new classification layer. During training the weights in all the pre-trained layers are frozen, so only the weights for the new layer(s) are trained. In other words, the gradient doesn't flow backwards past the first new layer.
 - **Finetuning**. This is similar to feature extraction except the pre-trained weights aren't frozen. The network is trained end-to-end.
 
-Download the training data and AlexNet weights.
-<a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580a829f_train/train.p" > training data </a>
+Download the <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580a829f_train/train.p" > training data </a> and <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npy" > AlexNet weights </a>.
+
 
 # 1. AlexNet for inference on the image set it was trained on.
 <img src="poodle.png"  title="poodle">
