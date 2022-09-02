@@ -36,3 +36,7 @@ The problem is that AlexNet was trained on the ImageNet database, which has 1000
 In order to successfully classify our traffic sign images, I removed the final, 1000-neuron classification layer and replace it with a new, 43-neuron classification layer.
 
 This is called feature extraction, because  basically I extracted the image features inferred by the penultimate layer, and passing these features to a new classification layer.
+
+# Training the Feature Extractor
+
+Training AlexNet (even just the final layer!) can take a little while, so if you don't have a GPU, running on a subset of the data is a good alternative. As a point of reference one epoch over the training set takes roughly 53-55 seconds with a GTX 970.
